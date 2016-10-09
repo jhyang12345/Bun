@@ -1,0 +1,118 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  width: 440px;
+  padding: 15px;
+  text-shadow: none;
+  font-weight: bold;
+  font-family: 'Lato', Roboto;
+  margin-top: 100px;
+  border-width: 1px;
+  border-color: #111
+
+}
+
+p.borderline {
+  border-width: 2px;
+  border-color: #333333;
+}
+
+.form-signin .form-signin-heading {
+  margin-bottom: 20px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input {
+  margin-bottom: 6px;
+}
+
+#inputFirstName {
+  width: 202px;
+  float: left;
+}
+
+#inputLastName {
+  width: 202px;
+  float: right;
+}
+
+#confirmPassword {
+  margin-top: -1px;
+  margin-bottom: 10px;
+}
+
+.alert-danger {
+    position: static;
+    width: 100%;
+    display: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+form.form-signin {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+form.form-signin span {
+  width: 100%;
+  overflow: auto;
+}
+
+.checkagain {
+  height: 25px;
+}
+
+#properemail {
+  font-size: 1.5em;
+  visibility: hidden;
+}
+
+#properpassword {
+  font-size: 1.5em;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-group {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  #signupbox {
+    display: none;
+    position: relative!important;
+    margin: 0!important;
+    right: 0!important;
+    width: 100%!important;
+  }
+
+  .form-signin {
+    width: 100%;
+
+  }
+}

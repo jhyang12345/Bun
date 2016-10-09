@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="pictures/letterlogo.png">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="user-scalable=no" height=device-height/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <meta charset="utf-8">
+    <title>Posts By</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="css/googlemap.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/bun.css" rel="stylesheet" type="text/css" />
+    <link href="css/bunpage.css" rel="stylesheet" type="text/css" />
+    <script src="js/parse-1.6.14.min.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUCWBiWilqVGMV2P0ILQVPt6ISat2Dm9Y&libraries=places">
+    </script>
+    <script src="js/jquery-1.11.3.js" ></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js" ></script>
+    <script src="js/autosize.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/googlemap.js"></script>
+    <script src="js/author.js"></script>
+  	<script>
+  		Parse.initialize("R6Za2GZWzmkKmvssylL7J9qyVxmP2rPgxoYmOvMq", "qzqQDTPpWPmyYNvWaN5ON9YtnWhFS8mGKHO9UrBO");
+  		var currentUser = Parse.User.current();
+  		if(currentUser) {
+  		} else {
+  			window.location.href = "./index.html";
+  		}
+  	</script>
+
+    <style type="text/css">
+      @media only screen and (max-device-width: 600px) {
+        #postsby {
+          top: 60px;
+          z-index: 1000;
+          left: auto;
+          right: 1em;
+          display: none;
+        }
+
+        .authorpostcount {
+          z-index: 1000;
+          left: auto;
+          right: 1em;
+          top: 160px;
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="offset" onLoad="window.scroll(0, 0)">
+
+    <div id="justblackbackground">
+    </div>
+
+    <div id="galleryoverlay">
+      <div class="folder">
+        <div class="holder">
+          <div id="navleft">
+            <img src="pictures/navleft.png" />
+          </div>
+          <div id="navright">
+            <img src="pictures/navright.png" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div id="overlay"></div>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./mainpage.html" id="header"><img id="wordlogo" src="pictures/wordlogo.png"/></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <!--<li><a href="#">Settings</a></li>-->
+              <li class="shownmenu foruser"><a href="" id="getnotification"><img src="pictures/notificationsquare.png" />Notifications</a>
+              <div id='notificationbox'>
+                <div id="notheader">Notifications<span class="notnumber"></span></div>
+              </div></li>
+              <li class="shownmenu">
+                <a href="" id="headerprofile">
+                  <div id="header-div"><img src="pictures/profile.png" id="headerprofilepic"/></div>
+                   
+                </a>
+                <div id="profilebox">
+                  <a href="./mypage.html"><img src="pictures/profileblue.png" />My Profile</a>
+                  <a href="./about.html"><img src="pictures/about.png" />About</a>
+                  <a href="" id="logout">Logout</a>
+                </div>
+              </li>
+              <li class="hiddenmenu"><a href="./post.html"><img src="pictures/post3.png" class="" />Make a Post</a></li>
+              <li class="hiddenmenu"><a href="./archive.html"><img src="pictures/archive1.png" class="" />Archive</a></li>
+              <li class="hiddenmenu"><a href="./taglist.html"><img src="pictures/tag3.png" />Taglist</a></li>
+              <li class="hiddenmenu"><a href="./googlemap.html"><img src="pictures/map1.png" />Map your Area</a></li>
+<li class="hiddenmenu"><a href="./mypage.html"><img src="pictures/profileblue.png" />My Profile</a></li>
+<li class="hiddenmenu"><a href="./about.html"><img src="pictures/about.png" />About</a></li>
+<li class="hiddenmenu"><a href="" id="logout2">Logout</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="postsby">
+      <div class="postsbyProfileDiv">
+        <img class="postsbyProfilePic" src=""/>
+      </div>
+    </div>
+
+    <div class="authorpostcount"></div>
+
+    <div class="main-container">
+      <div id="floatingnavigator">
+        <div class="navibuttons" id="gototop"><img src="pictures/up.png" style="width: 20px;" /></div>
+        <div class="navibuttons" id="gotobottom"><img src="pictures/down.png" style="width: 20px;" /></div>
+        <div class="navibuttons" id="makepost2"><b>POST</b></div>
+        <div class="navibuttons" id="maketab"><b>TAB</b></div>
+
+      </div>
+      <div id="mapthearea" class="floatbutton" title="Map of the area">
+        <img src="pictures/map1.png" />
+      </div>
+      <div id="taglist" class="floatbutton" title="List of tags ">
+        <img src="pictures/tag3.png" />
+      </div>
+      <div id="archive" class="floatbutton" title="Archive">
+        <img src="pictures/archive1.png" class="" />
+      </div>
+      <div id="makepost" class="floatbutton" title="Make a post!">
+        <img src="pictures/post3.png" class="" />
+      </div>
+
+    </div>
+
+  </body>
+
+</html>

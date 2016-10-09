@@ -1,0 +1,669 @@
+#map {
+  right: 0px;
+  position: absolute;
+}
+
+.bottomliner .label {
+  display: inline-block;
+  text-align: center;
+  background-color: #a0b7da;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  width: 120px;
+}
+
+.bottomliner .label:hover {
+  cursor: pointer;
+  background-color : #014783;
+}
+
+.iw-tail {
+  background-color: #111;
+  width: 4px;
+  height: 17px;
+}
+
+.gm-style-iw {
+  width: 350px;
+  text-align: center;
+	top: 15px !important;
+	background-color: #ffffff;
+	box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+	border: 0px solid #fff;
+	border-radius: 10px 10px 10px 10px;
+  padding: 5px;
+}
+
+.infobox-wrapper {
+    display:none;
+}
+
+.infobox {
+    margin-top: 8px;
+    background-color:#f0fdfe;
+    color:#111;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 10px;
+//    text-shadow:0 -1px #ddd;
+//    -webkit-box-shadow: 0 0  8px #ccc;
+//    box-shadow: 0 0 8px #ddd;
+    -moz-box-shadow: 0 1px 3px #777777;
+    -webkit-box-shadow: 0 1px 3px #777777;
+    box-shadow: 0 1px 3px #777777;
+}
+
+.infobox > .markercloser {
+  color: #fff;
+}
+
+.markerheader {
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.markerheader > img {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 10px;
+  height: 3em;
+}
+
+.markerinfo {
+  width: 100%;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 0.9em;
+  color: #999;
+}
+
+.markerauthor {
+//  float: left;
+  margin-right: 1em;
+}
+
+.markertitle {
+  font-size: 1.2em;
+  vertical-align: middle;
+  line-height: 1.2em;
+}
+
+.bubbleheader {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.bubbleicon {
+  width: 50px;
+  height: 50px;
+}
+
+.distance {
+  position: absolute;
+  display: none;
+  font-size: 12px;
+  font-style: italic;
+  right: 15px;
+  top: 5px;
+  color: #b4b4b4;
+}
+
+.infotitle {
+  font-size: 20px;
+  margin-left: 10px;
+  bottom: 0px;
+  position: absolute;
+  width: 300px;
+  white-space: nowrap;
+  text-overflow: ellipsis !important;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.markercloser {
+  color: #666;
+  z-index: 5000;
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.markercloser:hover {
+  cursor: pointer;
+  color: #111;
+}
+
+.posttitle {
+//  border-bottom: 1px solid;
+//  border-bottom-color: gray;
+//  -webkit-border-radius: 5px;
+//  -moz-border-radius: 5px;
+//  border-radius: 5px;
+  padding: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 1.2em;
+  background-color: #f5f5f5;
+  margin-right: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: #fff;
+  border-bottom-width: 1px;
+}
+
+.posttitle:hover {
+  cursor: pointer;
+}
+
+.postdetail {
+  font-size: 0.8em;
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: right;
+  color: #999;
+  padding-top: 10px;
+}
+
+.postdetail > img {
+  height: 1.2em;
+}
+
+.postauthor {
+  margin-right: 0.4em;
+}
+
+.authoriconholder {
+  width: 1.6em;
+  height: 1.6em;
+  overflow: hidden;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-right: 0.4em;
+
+}
+
+.authoricon {
+  -webkit-transform:translate(-50%);
+  -moz-tranform:translate(-50%);
+  -ms-transform: translate(-50%); /* IE 9 */
+  transform: translate(-50%);
+  margin-left: 50%;
+  max-height: 1.6em;
+  left: 0px;
+  position: absolute;
+}
+
+.authoriconholder .heightlong {
+  max-width: 1.6em !important;
+  max-height: none !important;
+}
+
+.infoicon {
+  margin-right: 0.4em;
+}
+
+.detailsmileys {
+  margin-right: 0.4em;
+}
+
+.detailcomments {
+  margin-right: 0.4em;
+}
+
+.postdate {
+
+}
+
+#addmarker {
+  display: none;
+}
+
+#addshape {
+  display: none;
+}
+
+#addroute {
+  display: none;
+}
+
+#done {
+  display: none;
+}
+
+#label {
+  display: none;
+}
+
+#getposition {
+  background-color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Lato', Roboto, Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  border-radius: 3px;
+  padding: 5px;
+  position: fixed;
+  margin-left: 10px;
+}
+
+#getposition:hover {
+  cursor: pointer;
+}
+
+#getposition > img {
+  width: 30px;
+}
+
+#markertype {
+  padding: 10px;
+  background-color: #FFF;
+  width: 300px;
+  height: 400px;
+  position: fixed;
+  z-index: 4000;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-box-shadow: 0 2px 5px #777777;
+  -webkit-box-shadow: 0 2px 5px #777777;
+  box-shadow: 0 2px 5px #777777;
+  display: none;
+}
+
+#markertype .typeline {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+#markertype img {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+}
+
+#markertype .typename {
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+#markertype .typebutton {
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 10px;
+  width: 120px;
+}
+
+#markertype .typebutton:hover {
+  cursor: pointer;
+  background-color: #b0e2ff;
+  -moz-box-shadow:    inset 0 0 5px #555555;
+  -webkit-box-shadow: inset 0 0 5px #555555;
+  box-shadow:         inset 0 0 4px #555555;
+}
+
+#markertype .typebutton:first-child {
+  padding-left: 5px;
+  padding-right: 5px;
+  left: 10px;
+  position: absolute;
+}
+
+#markertype .typebutton:last-child {
+  padding-left: 5px;
+  padding-right: 5px;
+  right: 10px;
+  position: absolute;
+}
+
+#markertype .typeline:nth-child(2) {
+  top: 100px;
+}
+
+#markertype .typeline:nth-child(3) {
+  top: 200px;
+}
+
+#markerlabeling {
+  width: 600px;
+  top: 10%;
+  left: 25%;
+  position: fixed;
+  z-index: 2001;
+
+  display: none;
+  -moz-box-shadow: 2px 2px 2px 2px  5px 5px #FFFFFF;
+  -webkit-box-shadow:2px 2px 2px 2px  5px 5px #FFFFFF;
+  box-shadow: 2px 2px 2px 2px  5px 5px #FFFFFF;
+}
+
+#labelingbackground {
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 2000;
+  display: none;
+}
+
+#labeler {
+    padding-left: 12px;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    font-size: 1.4em;
+}
+
+.autoquery {
+  padding: 5px;
+  padding-left: 8px;
+  background-color: #fff;
+  border-style: solid;
+  border-color: gray;
+  border-width: 1px;
+}
+
+.autoquery:hover {
+  cursor: pointer;
+  background-color: #dfdfdf;
+}
+
+.titleholder {
+  display: inline-block;
+  width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.querydistance {
+  float: right;
+}
+
+#markersearchbox {
+  width: 300px;
+  margin-left: 12px;
+}
+
+#markersearch {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+  height: 32px;
+  border: none;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.searchresult {
+  padding: 0 11px 0 6px;
+  height: 32px;
+  width: 300px;
+  background-color: #fff;
+  line-height: 32px;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.searchresult:hover {
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.hoveredresult {
+  background-color: #f5f5f5;
+}
+
+.markertype {
+  height: 24px;
+  margin-right: 3px;
+  margin-top: -24px;
+}
+
+.markername {
+  text-overflow: ellipsis !important;
+  font-size: 12px;
+  max-width: 220px;
+  height: 100%;
+  font-family: Roboto;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.markerdistance {
+  color: #b9c5c8;
+  font-size: 1em;
+  font-style: italic;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: none;
+}
+
+#addjustmarker {
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+#addjustmarker > img{
+  height: 60px;
+  width: 60px;
+}
+
+.addingmarker {
+  background-color: #cecfcf!important;
+}
+
+#savemarker {
+  margin-top: 20px;
+  margin-right: 30px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+  display: none;
+}
+
+#sidebarholder {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 0px;
+
+  z-index: 1;
+  background-color: #fdfdfd;
+
+  box-shadow: 2px 2px 3px #aaa;
+  -moz-box-shadow: 2px 2px 3px #aaa;
+  -webkit-box-shadow: 2px 2px 3px #aaa;
+  font-size: 100%;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+#sidebar {
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+}
+
+#sidebar > .markertitle > img {
+
+}
+
+#sidepicframe {
+  height: 2em;
+  width: 2em;
+  overflow: hidden;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-right: 0.2em;
+}
+
+#sidepic {
+  -webkit-transform:translate(-50%);
+  -moz-tranform:translate(-50%);
+  -ms-transform: translate(-50%); /* IE 9 */
+  transform: translate(-50%);
+  max-height: 2em;
+  position: absolute;
+  display: inline-block;
+  margin-left: 50%;
+  left: 0px;
+
+}
+
+#sidepicframe .heightlong {
+  max-width: 2em !important;
+  max-height: none !important;
+}
+
+.sideborder {
+  right: 0px;
+  height: 100%;
+  background-color: #ddd;
+  width: 10px;
+  top: 0px;
+  position: absolute;
+  z-index: 2;
+}
+
+.sideborder:hover {
+  cursor: w-resize;
+}
+
+@media only screen and (max-width: 600px) {
+  #markerlabeling {
+    width: 90%;
+    top: 55px;
+  }
+
+  .infoBox {
+    width: 90% !important;
+    font-size: 100%;
+  }
+
+  .bubbleheader {
+    margin-bottom: 0.5em;
+  }
+
+  .infobox {
+    padding: 0.5em;
+  }
+
+  .infotitle {
+    font-size: 0.8em;
+    width: 80%;
+  }
+
+  .distance {
+    font-size: 0.3em;
+  }
+
+  .bubbleicon {
+    height: 2em;
+    width: auto;
+  }
+
+  #pac-input {
+    display: none !important;
+  }
+
+  #markersearchbox {
+    width: 90%;
+  }
+
+  #markersearch {
+    width: 100%;
+  }
+
+  .searchresult {
+    width: 100%;
+  }
+
+  .markername {
+    max-width: 80%;
+  }
+
+  #getposition {
+    margin-top: 1.5em;
+  }
+
+  #getposition > img {
+    width: 2em;
+  }
+
+  #sidebarholder {
+    height: 0;
+    max-width: none;
+    width: 100%;
+    bottom: 0px;
+    font-size: 100%;
+    box-shadow: -4px -2px 3px #aaa;
+    -moz-box-shadow: -4px -2px 3px #aaa;
+    -webkit-box-shadow: -4px -2px 3px #aaa;
+  }
+
+  .markerheader {
+    margin-top: 10px;
+  }
+
+  .sideborder {
+    right: 0px;
+    height: 100%;
+    background-color: #ddd;
+    width: 100%;
+    height: 10px;
+    top: 0px;
+    position: absolute;
+  }
+
+  .markertitle {
+    font-size: 1.5em;
+  }
+
+  .posttitle {
+    margin-right: 0px;
+  }
+
+  #map {
+    top: 0px !important;
+  }
+}

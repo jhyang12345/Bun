@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.5.0"
+  },
+  "applications": {
+    "Bun": {
+      "applicationId": "R6Za2GZWzmkKmvssylL7J9qyVxmP2rPgxoYmOvMq",
+      "masterKey": "GZNIL5QqnaP8lTrbjTZME8aLI89UnnGDIaiwVcIW"
+    },
+    "_default": {
+      "link": "Bun"
+    }
+  }
+}

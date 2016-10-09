@@ -1,0 +1,164 @@
+body {
+  background-color: #e6fdfe;
+  font-family: 'Lato', Roboto;
+}
+
+#main {
+  width: 300px;
+  height: 200px;
+
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+
+  position: fixed; /* or absolute */
+  top: 50%;
+  margin-top: -100px;
+  left: 15%;
+  right: 50%;
+  text-align: center;
+}
+
+#signupbox {
+  right: 15%;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  margin-top: -300px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+.mainicon {
+  vertical-align: text-bottom;
+  margin: auto;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.navbar-right {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  font-family: 'Lato', Roboto;
+}
+
+
+a {
+  text-decoration: underline;
+  color: #111111;
+}
+
+#header {
+  margin-left: 20px;
+}
+
+.container {
+  width: 100%;
+}
+
+#mobilelogin {
+  display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    font-size: 120%;
+    vertical-align: middle;
+  }
+
+  #header {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #main {
+
+    margin-top: 25px;
+    font-size: 100%;
+    width: 100%;
+    height: 150%;
+    left: 0;
+    top: 50px;
+    right: 0;
+    vertical-align: middle;
+    position: absolute;
+
+  }
+
+  #main > .mainicon {
+  }
+
+  #main > a {
+    font-size: 1.5em;
+  }
+
+  #mobilelogin {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .form-control {
+  }
+
+  #mobilelogin > input {
+    margin-left: 5%;
+    margin-right: 5%;
+
+    width: 90%;
+    height: 2em !important;
+    font-size: 1.5em !important;
+  }
+
+  #mobilelogin > input:focus {
+    border-color: #ddd !important;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: -webkit-focus-ring-color none 5px;
+    background-color: #f4f4f4;
+  }
+
+  #inputEmail2 {
+    border-bottom-right-radius: 0px;
+    -moz-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-border-bottom-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+  }
+
+  #inputEmail2:focus {
+    z-index: 3;
+  }
+
+  #inputPassword2 {
+    border-top-right-radius: 0px;
+    -moz-border-top-right-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    -moz-border-top-left-radius: 0px;
+    -webkit-border-top-left-radius: 0px;
+    margin-top: -1px;
+  }
+
+  #signin2 {
+    margin-top: 4%;
+    width: 90%;
+    background-color: #29ABE2;
+    border-color: #29ABE2;
+    font-size: 1.5em !important;
+  }
+
+  #signup2 {
+    margin-top: 6%;
+    font-size: 1.5em !important;
+  }
+}

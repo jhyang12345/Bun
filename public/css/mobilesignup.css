@@ -1,0 +1,16 @@
+#inputFirstName {
+  width: 48%;
+}
+
+#inputLastName {
+  width: 48%;
+}
+
+body {
+  background-color: #e6fdfe;
+}
+
+.alert {
+  width: 100%!important;
+
+}

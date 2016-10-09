@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="user-scalable=no" height=device-height/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="icon" href="pictures/letterlogo.png">
+    <title>
+      Dashiga
+    </title>
+    <script src="js/jquery-1.11.3.js" ></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js" ></script>
+    <script src="js/parse-1.5.0.min.js" ></script>
+    <script>
+      	Parse.initialize("R6Za2GZWzmkKmvssylL7J9qyVxmP2rPgxoYmOvMq", "qzqQDTPpWPmyYNvWaN5ON9YtnWhFS8mGKHO9UrBO");
+    		var currentUser = Parse.User.current();
+    		if(currentUser) {
+          window.location.href = "./mainpage.html";
+    		} else {
+
+    		}
+    </script>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/signup.css" rel="stylesheet" type="text/css" />
+    <link href="css/bun.css" rel="stylesheet" type="text/css" />
+    <link href="css/greentea.css" rel="stylesheet" type="text/css" />
+
+	</head>
+
+  <body class="offset" onLoad="window.scroll(0, 0)">
+
+
+      <!--
+        Below we include the Login Button social plugin. This button uses
+        the JavaScript SDK to present a graphical Login button that triggers
+        the FB.login() function when clicked.
+      -->
+
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" id="header"><img id="wordlogo" src="pictures/wordlogo.png"/></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="email" placeholder="Email" class="form-control" id="inputEmail" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control" id="inputPassword">
+            </div>
+            <button type="submit" class="btn btn-success" id="signin">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    <div id="main">
+      <img class="mainicon" src="pictures/indexlogo.png" />
+      <a href="./about.html" id="test" style="display: block;">About</a>
+      <div id="mobilelogin">
+        <input type="email" id="inputEmail2" class="form-control" placeholder="Email address" required />
+        <input type="password" id="inputPassword2" class="form-control" placeholder="Password" required />
+        <button type="submit" class="btn btn-success" id="signin2">Sign in</button>
+        <button type="submit" class="btn btn-success" id="signup2">or Sign up</button>
+      </div>
+    </div>
+    <div id="signupbox">
+        <form class="form-signin">
+          <h2 class="form-signin-heading">Sign up here</h2>
+            <span>
+            <label for="inputFirstName" class="sr-only">First Name</label>
+            <input type="text" id="inputFirstName" class="form-control" placeholder="First Name" required autofocus />
+              <label for="inputLastName" class="sr-only">Last Name</label>
+            <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" required />
+          </span>
+            <label for="signupEmail" class="sr-only">Email address</label>
+          <input type="email" id="signupEmail" class="form-control" placeholder="Email address" required />
+            <label for="signupPassword" class="sr-only">Password</label>
+          <input type="password" id="signupPassword" class="form-control" placeholder="Password" required />
+            <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required />
+          <button type="submit" class="btn btn-lg btn-primary btn-block" id="signup">Sign up</button>
+        </form>
+        <div class="alert alert-danger alert-dismissible fade in" role="alert" id="notemail">
+          <h4>Enter a proper email address</h4>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade in" role="alert" id="fixpassword">
+          <h4>Need a longer password</h4>
+        </div>
+      <p class="checkagain">
+        <h1 id="properemail">Enter proper Email address</h1>
+      </p>
+      <p class="checkagain">
+        <h1 id="properpassword">Password is not long enough</h1>
+      </p>
+
+  </div>
+
+
+
+    <script src="js/signup.js" ></script>
+    <script src="js/signin.js" ></script>
+
+  </body>
+</html>
